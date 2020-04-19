@@ -1,0 +1,72 @@
+/*---- ----- ----- ----- -----*/
+
+body {
+    --main-red-color: #FF5A5F;
+    --text-color: #212121;
+    --label-color: #484848;
+    --input-active-color: #5A6BFF;
+    font-family: 'Raleway';
+}
+a { text-decoration: none; }
+
+/*---- ----- ----- ----- -----*/
+.button { border-radius: 4px; height: 20px; padding: 14px 0; text-align: center; font-weight: bold; }
+.button.buttonSend { background-color: var(--main-red-color); color: #FFFFFF; border: none;   }
+.button.buttonSmall { width: 122px; }
+.button.buttonBig { width: 320px; }
+.button.buttonSuccess { border: 1px solid #000000; box-sizing: border-box; border-radius: 4px; color: var(--text-color); background: #FFFFFF; }
+
+
+/*---- ----- ----- ----- -----*/
+header { padding: 45px 146px 138px 146px; }
+header .headerWrapper { display: flex; justify-content: space-between; align-items: center; }
+header .headerWrapper .headerMenu { display: flex; justify-content: space-between; align-items: center; font-size: 16px; }
+header .headerWrapper .headerMenu ul { display: flex; list-style: none; padding: 0; margin: 0; }
+header .headerWrapper .headerMenu ul li { display: flex; list-style: none; padding: 0 32px; margin: 0; }
+header .headerWrapper .headerMenu ul li a { color: var(--text-color); }
+
+/*---- ----- ----- ----- -----*/
+.mapWrapper {  background-image: url('img/Map.png'); background-repeat: no-repeat; height: calc(100% - 235px);background-size: cover;position: absolute;width: 100%; margin: }
+.mapWrapper .mapIcon { position: absolute; left: 20%; top: 20%; }
+.mapWrapper .mapIcon:before  { content: ""; display: block; height: 32px; width: 32px; background-size: 32px 32px; background-image: url(img/map_icon_color.svg); background-repeat: no-repeat; }
+.mapWrapper .infoLeft--wrapper { position: absolute;line-height: 24px; padding: 36px 32px 43px; left: 0px; bottom: 0px; background: rgba(255, 255, 255, 0.45); backdrop-filter: blur(8px); border-radius: 0px 8px 0px 0px;  }
+.mapWrapper .infoLeft--wrapper .infoLeft { margin-bottom: 28px; }
+.mapWrapper .infoLeft--wrapper .infoLeft a { display: flex; align-items: center; color: var(--text-color); font-size: 14px;  }
+.mapWrapper .infoLeft--wrapper .infoLeft a.map:before { content: ""; display: block; height: 32px; width: 32px; background-size: 32px 32px; background-image: url(img/icon_map.svg); background-repeat: no-repeat; margin-right: 24px;  }
+.mapWrapper .infoLeft--wrapper .infoLeft a.number:before { content: ""; display: block; height: 32px; width: 32px; background-size: 32px 32px; background-image: url(img/phone_map.svg); background-repeat: no-repeat; margin-right: 24px; }
+.mapWrapper .infoLeft--wrapper .infoLeft a.mail:before  { content: ""; display: block; height: 32px; width: 32px; background-size: 32px 32px; background-image: url(img/mail_map.svg); background-repeat: no-repeat; margin-right: 24px; }
+.mapWrapper .formWrapper { text-align: center; box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12); max-width: 320px; border-radius: 8px 8px 0px 0px; background: #fff; position: absolute; right: 147px; padding: 36px 48px; top: -92px; }
+.mapWrapper .formWrapper .formName { font-weight: bold; font-size: 36px; color: #000000; margin-bottom: 38px;  }
+.mapWrapper .formWrapper button { height: auto; outline: none; height: 52px; }
+.mapWrapper .formWrapper button img { display: none; margin: 0 auto; }
+.mapWrapper .formWrapper button img.animation { animation: rotation 0.5s  infinite; }
+
+.mapWrapper .formWrapper .field { width: 100%; display: flex; flex-direction: column; margin-bottom: 32px; position: relative; text-align: left; }
+.mapWrapper .formWrapper .field label { display: flex; margin-bottom: 8px; color: var( --label-color); justify-content: space-between; font-weight: bold; text-transform: uppercase; }
+.mapWrapper .formWrapper .field label span:last-child { display: none; font-size: 12px; color: var(--main-red-color); align-items: center; text-transform: capitalize; }
+.mapWrapper .formWrapper .field .selectArrow { content: ""; height: 6px; position: absolute; right: 16px; top: 48px; width: 8px; background-size: 8px 6px; background-image: url(img/arrow.svg); background-repeat: no-repeat;  }
+.mapWrapper .formWrapper .field select { appearance: none; -webkit-appearance: none; -moz-appearance: none; background: transparent; }
+.mapWrapper .formWrapper .field select, .mapWrapper .formWrapper .field input { padding: 14px 16px; border: 1px solid #EBEBEB; box-sizing: border-box; border-radius: 4px; outline: none;  }
+.mapWrapper .formWrapper .field input { color: var(--text-color); position: relative; width: 100%;  }
+.blueLine:before { display: none; }
+.blueLine:before {content: ""; display: block; position: absolute; left: 0; top: 0; height: 100%; width: 2px; background-color: var(--input-active-color); border-top-left-radius: 4px;border-bottom-left-radius: 4px; }
+.mapWrapper .formWrapper .field .fieldInput { position: relative; overflow: hidden; border-radius: 4px; }
+.mapWrapper .formWrapper .field .fieldInput.blueLine:before { content: ""; position: absolute; left: 1px; top: 1px; height: calc(100% - 2px); width: 2px; background-color: var(--input-active-color); z-index: 99; border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
+.mapWrapper .formWrapper .field input.message { padding: 14px 16px 79px; }
+.mapWrapper .formWrapper .field .craftSelect { list-style: none; padding: 14px 16px; border: 1px solid #EBEBEB; box-sizing: border-box; border-radius: 4px; outline: none; margin: 0; position: relative; }
+.mapWrapper .formWrapper .field .craftSelect--bottom { display: none; }
+
+.mapWrapper .formWrapper .field .craftSelect .craftSelect--bottom { z-index: 999;  width: calc(100% + 4px); position: absolute; background: #FFFFFF; left: -2px; top: 46px; border: 1px solid #EBEBEB; box-sizing: border-box; box-shadow: 0px 15px 46px rgba(26, 26, 29, 0.12); border-radius: 4px; }
+.mapWrapper .formWrapper .field .craftSelect .craftSelect--bottom div { font-size: 16px; padding: 20px 15px 20px; }
+.mapWrapper .formWrapper .field .craftSelect .craftSelect--bottom div:hover { background: #F7F7F7; color: var(--input-active-color); }
+
+.mapWrapper .formWrapper .formSuccess { margin-top: 94px; padding-bottom: 77px; }
+.mapWrapper .formWrapper .formSuccess .textSuccess { text-align: center; color: #000000; font-weight: bold; font-size: 32px; line-height: 38px; margin-bottom: 26px; margin-top: 40px;  }
+.mapWrapper .formWrapper .formSuccess .textSuccess--small { font-size: 16px; line-height: 24px; text-align: center; color: var(--text-color); margin-bottom: 60px;  }
+
+@-webkit-keyframes rotation {  from { -webkit-transform: rotate(0deg); }  to { -webkit-transform: rotate(180deg); } }
+
+
+
+
+
